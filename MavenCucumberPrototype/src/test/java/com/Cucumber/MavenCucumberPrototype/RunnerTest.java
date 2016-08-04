@@ -10,8 +10,8 @@ import cucumber.api.junit.Cucumber;
 		//format = {"pretty","html:target/html"},
 		format = {"pretty","json:target/json", "html:target/html"},
 		features = {"src/test/resource"},
-		tags = {"@Applicattion,@Web"}
+		tags = {"@Applicattion,@Web,@drop"}
 		)
 public class RunnerTest {
-
+	
 }
