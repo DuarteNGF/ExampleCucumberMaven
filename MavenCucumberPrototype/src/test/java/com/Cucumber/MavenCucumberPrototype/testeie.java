@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.DataTable;
@@ -22,16 +23,16 @@ public class testeie {
 	@Given("^Entrar no IE$")
 	public void entrar_no_Google() throws Throwable {
 		
-		//DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-		//capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 		File file = new File("src/test/resource/IEDriverServer.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		//WebDriver driver = new FirefoxDriver();
+		//WebDriver driverIE = new FirefoxDriver();
 		
 		
-		WebDriver driverIE = new InternetExplorerDriver();
+		driverIE = new InternetExplorerDriver(capabilities);
 		driverIE.navigate().to("https://www.google.pt/");
-		
+		//driverIE.close();
 				
 	}
 
