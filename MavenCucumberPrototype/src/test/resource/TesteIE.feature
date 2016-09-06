@@ -1,8 +1,7 @@
-@tag1
 Feature: Apenas um teste ao IE
 
 @tag1
-Scenario: Title of your scenario
+Scenario: Abrir e fechar o Chrome
 Given Entrar no IE
-When Fazer uma pesquisa
+When pesquisar benfica
 Then Fechar o IE
