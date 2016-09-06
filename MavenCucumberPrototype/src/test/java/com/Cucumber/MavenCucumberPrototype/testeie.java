@@ -27,12 +27,9 @@ public class testeie {
 		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 		File file = new File("src/test/resource/IEDriverServer.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		//WebDriver driverIE = new FirefoxDriver();
-		
 		
 		driverIE = new InternetExplorerDriver(capabilities);
-		driverIE.navigate().to("https://www.google.pt/");
-		//driverIE.close();
+		driverIE.navigate().to("http://10.141.3.41:6800/spl/");
 				
 	}
 
